@@ -1,217 +1,118 @@
-/* =========================
-   Design System - Projeto Aurora
-========================= */
-
-/* Cores */
 :root {
-  --primaria: #1a1a1a;       /* fundo escuro */
-  --secundaria: #ff5c8d;     /* destaque / botões */
-  --terciaria: #00d4ff;      /* links / detalhes */
-  --texto-claro: #f5f5f5;
-  --texto-escuro: #222222;
-  --neutra-clara: #eeeeee;
-  --neutra-escura: #333333;
-  --alerta: #ff4d4d;
+  --primaria: #1e1e1e;
+  --secundaria: #ff3c78;
+  --terciaria: #00d4ff;
+  --neutra-clara: #f5f5f5;
+  --neutra-escura: #2c2c2c;
+  --texto-claro: #ffffff;
+  --texto-escuro: #111111;
 }
 
-/* Tipografia */
 body {
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  background: var(--primaria);
   color: var(--texto-claro);
-  background-color: var(--primaria);
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Títulos */
-h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-h2 { font-size: 2rem; margin-bottom: 0.8rem; }
-h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-
-/* Links */
-a {
-  color: var(--terciaria);
-  text-decoration: none;
-}
-a:hover {
-  color: var(--secundaria);
-}
-
-/* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 32px;
-  background-color: var(--neutra-escura);
-  position: relative;
-}
-header h1 { margin: 0; }
-
-/* Menu links */
-header nav {
-  display: flex;
-  gap: 16px;
-}
-header nav a.ativo {
-  color: var(--secundaria);
-  font-weight: bold;
+  padding: 16px;
+  background: var(--neutra-escura);
 }
 
-/* Mobile menu (hambúrguer) */
+header h1 {
+  margin: 0;
+}
+
+.menu-links a {
+  margin-left: 16px;
+  color: var(--texto-claro);
+  text-decoration: none;
+  font-weight: 500;
+}
+
 .menu-hamburguer {
   display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 4px;
 }
+
 .menu-hamburguer div {
   width: 25px;
   height: 3px;
   background-color: var(--texto-claro);
-  transition: 0.3s;
 }
 
-/* Main */
 main {
   padding: 32px;
 }
 
-/* Cards Projetos */
 .projetos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
-  margin-top: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
 }
 
 .card {
-  background-color: var(--neutra-escura);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--neutra-escura);
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-}
-
-.card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-.card h3 {
-  margin: 16px;
-}
-
-.card p {
-  margin: 0 16px 16px 16px;
-}
-
-.card button {
-  margin: 0 16px 16px 16px;
-  padding: 10px 20px;
-  background-color: var(--secundaria);
-  border: none;
-  border-radius: 8px;
-  color: var(--texto-claro);
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s, transform 0.2s;
-}
-.card button:hover {
-  background-color: var(--terciaria);
   transform: scale(1.05);
 }
 
-/* Formulário Cadastro */
 form {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background-color: var(--neutra-escura);
-  padding: 32px;
-  border-radius: 16px;  /* borda corrigida */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  max-width: 400px;
 }
 
-form fieldset {
-  border: 1px solid var(--neutra-clara);
-  border-radius: 12px;
-  padding: 16px;
-}
-
-form legend {
-  font-weight: bold;
-}
-
-form label {
-  font-weight: 500;
-}
-
-form input {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid var(--neutra-clara);
-  outline: none;
-  font-size: 1rem;
-  background-color: var(--primaria);
-  color: var(--texto-claro);
-}
-
-form input:focus {
-  border: 2px solid var(--secundaria);
-}
-
-form button {
-  padding: 14px;
-  background-color: var(--secundaria);
+input, button {
+  padding: 8px;
+  border-radius: 4px;
   border: none;
-  border-radius: 10px;
-  color: var(--texto-claro);
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
 }
-form button:hover {
-  background-color: var(--terciaria);
+
+button {
+  background: var(--secundaria);
+  color: var(--texto-claro);
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+button:hover {
   transform: scale(1.05);
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 16px;
-  background-color: var(--neutra-escura);
-  color: var(--texto-claro);
-  margin-top: 32px;
-}
-
-/* =========================
-   Responsividade
-========================= */
+/* Responsividade */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  header nav {
-    flex-direction: column;
+  .menu-links {
     display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--neutra-escura);
+    margin-top: 8px;
+    padding: 16px;
+    border-radius: 8px;
   }
+
+  .menu-links.ativo {
+    display: flex;
+  }
+
   .menu-hamburguer {
     display: flex;
   }
 }
 
-@media (max-width: 480px) {
-  .card img {
-    height: 120px;
-  }
-}
