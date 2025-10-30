@@ -30,3 +30,31 @@ O projeto é uma aplicação web construída com **HTML, CSS e JavaScript**, com
 ---
 
 ## Estrutura do Projeto
+meu-projeto-ong/
+│
+├─ index.html
+├─ projetos.html
+├─ cadastro.html
+├─ README.md
+├─ css/
+│ └─ style.css
+├─ js/
+│ └─ spa.js
+└─ imagens/
+├─ logo.png
+├─ voluntario.png
+└─ ...demais imagens
+
+---
+
+## Como Executar
+1. Clone o repositório:
+git clone https://github.com/RxnxCxss/projetoto-aurora.git
+
+2. Abra o arquivo index.html em seu navegador.
+
+3.Explore as seções da ONG e seus projetos.
+
+## Licença
+
+Este projeto é de uso educacional e não comercial.
